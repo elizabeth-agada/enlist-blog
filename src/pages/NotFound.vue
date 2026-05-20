@@ -5,7 +5,7 @@
     <div class="relative mb-8">
       <Ghost :size="100" class="text-indigo-300 animate-bounce" />
       <div class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-black px-2 py-1 rounded-full">
-        BOO!
+        OOPS!
       </div>
     </div>
 
@@ -15,11 +15,11 @@
       Looks like this page ghosted you 👻
     </p>
     
-    <p class="text-gray-400 mb-2 max-w-sm">
+    <p class="text-gray-600 mb-2 max-w-sm">
       You wandered into the void. There's nothing here but echoes and broken dreams.
     </p>
 
-    <p class="text-gray-300 text-sm mb-10 italic">
+    <p class="text-gray-500 text-sm mb-10 italic">
       (and maybe a ghost or two)
     </p>
 
@@ -41,7 +41,7 @@
     </div>
 
     <!-- Fun footer text -->
-    <p class="mt-12 text-xs text-gray-300">
+    <p class="mt-12 text-xs text-gray-500">
       Error 404 · Page not found · Gone · Vanished · Poof 💨
     </p>
   </div>
