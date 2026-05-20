@@ -3,7 +3,7 @@
     <p class="text-red-500 font-semibold">Failed to load posts. Please refresh.</p>
   </div>
   <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <PostCard v-for="post in posts" :key="post.id" :post="post" />
+    <PostCard v-for="(post, index) in posts" :key="post.id" :post="post" :index="index" />
   </div>
 </template>
 

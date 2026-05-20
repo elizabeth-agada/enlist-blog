@@ -1,30 +1,25 @@
 <template>
   <div class="min-h-screen bg-gray-50">
     <Navbar />
-
     <main class="max-w-4xl mx-auto px-6 py-12">
-      <!-- Hero -->
       <div class="text-center mb-12">
+        <div class="flex items-center justify-center gap-2 text-indigo-500 mb-3">
+          <Rss :size="18" />
+          <span class="text-sm font-semibold uppercase tracking-widest">Latest Articles</span>
+        </div>
         <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">
           Latest <span class="text-indigo-600">Posts</span>
         </h1>
-        <p class="text-gray-500 text-lg">Explore our collection of articles and stories.</p>
+        <p class="text-gray-500 text-lg">Explore our collection of articles and details.</p>
       </div>
-
-      <!-- Error Boundary wraps the async content -->
       <ErrorBoundary>
-        <!-- Suspense handles lazy loading -->
         <Suspense>
           <template #default>
             <PostList />
           </template>
           <template #fallback>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div
-                v-for="n in 6"
-                :key="n"
-                class="bg-white border border-gray-200 rounded-2xl p-6 animate-pulse"
-              >
+              <div v-for="n in 6" :key="n" class="bg-white border border-gray-200 rounded-2xl p-6 animate-pulse">
                 <div class="flex gap-4">
                   <div class="w-10 h-10 rounded-full bg-gray-200" />
                   <div class="flex-1 space-y-3">
@@ -44,9 +39,9 @@
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
+import { Rss } from 'lucide-vue-next'
 import Navbar from '../components/Navbar.vue'
 import ErrorBoundary from '../components/ErrorBoundary.vue'
 
-// Lazy load PostList component
 const PostList = defineAsyncComponent(() => import('../components/PostList.vue'))
 </script>

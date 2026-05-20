@@ -1,8 +1,9 @@
 export interface Post {
-  id: number
+  id: string | number
   title: string
   body: string
-  userId: number
+  content?: string
+  userId?: string | number
 }
 
 export interface PostsResponse {
